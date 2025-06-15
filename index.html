@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Search</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header>
+    <div class="logo flex justify-center items-center py-4">
+      <img src="img/logo.png" alt="Logo" class="w-[10%]" />
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div
+    class="hero bg-[url('img/page-title.jpg')] min-h-[45vh] w-full text-white flex flex-col gap-6 justify-center items-center bg-cover bg-center">
+    <h1 class="text-3xl font-bold text-center mt-15">
+      Search Your <br />
+      Favorite Recipe
+    </h1>
+    <p class="text-center">
+      A handful of simple ingredients tipify the fresh, <br />
+      vibrant flavors of Greek cooking
+    </p>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Search Bar -->
+    <div class="searchBar flex items-center justify-center w-[60vw] mx-auto my-8">
+      <input type="text" name="Search" class="border border-[#adadad] outline-none px-4 py-2 rounded-[5px] w-full"
+        placeholder="Search..." />
+      <span class="ml-[-40px] h-[42px] bg-yellow-400 p-[10px] rounded text-center flex items-center justify-center">
+        <i class="fas fa-search text-[17px]"></i>
+      </span>
+    </div>
+
+    <!-- Recipes Section -->
+    <div class="mt-8 w-full">
+      <h2 class="text-4xl text-center mb-6">Latest Recipes</h2>
+      <div class="recipesContainer">
+        <div class="recipes w-[70vw] m-auto flex flex-wrap gap-4">
+          <template
+            class="recipe max-w-[250px] shadow-[2px_2px_6px_rgba(0,0,0,0.2)] rounded-lg overflow-hidden bg-white">
+            <!-- Image Section -->
+            <div class="w-full h-40 overflow-hidden">
+              <img class="w-full h-full object-cover object-center"
+                src="https://www.themealdb.com//images//media//meals//xd9aj21740432378.jpg" alt="Migas" />
+            </div>
+
+            <!-- Content Section -->
+            <div class="flex flex-col px-2 py-2">
+              <h3 class="font-bold">Migas</h3>
+              <p id="myParagraph" class="text-[14px] mb-2">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure delectus velit eaque.
+              </p>
+              <button class="bg-yellow-400 text-[14px] self-end px-2 py-1 rounded-sm">
+                View Details
+              </button>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#3c3b3b] min-h-[10vh] mt-5 flex px-5 text-white">
+    <div class="flex justify-between w-[70vw] m-auto items-center">
+      <p>Copyright © 2023 - All rights reserved</p>
+      <div class="icon flex gap-3 text-lg">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
